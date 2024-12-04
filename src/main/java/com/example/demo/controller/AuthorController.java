@@ -20,10 +20,7 @@ import com.example.demo.service.AuthorService;
 @PreAuthorize("hasRole('ADMIN')")
 public class AuthorController {
 	@Autowired	
-	private AuthorService authorService ;
-	@Autowired
-	private authorRepo authorRepo ;
-	
+	private AuthorService authorService ;	
 	@GetMapping("/get-all-authors")
 	public List <Author> getAll() {
 		return authorService.getAll();
