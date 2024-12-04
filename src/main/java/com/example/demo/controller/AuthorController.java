@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.entity.Author;
+import com.example.demo.repo.authorRepo;
 import com.example.demo.service.AuthorService;
 
 @RestController
@@ -20,6 +21,8 @@ import com.example.demo.service.AuthorService;
 public class AuthorController {
 	@Autowired	
 	private AuthorService authorService ;
+	@Autowired
+	private authorRepo authorRepo ;
 	
 	@GetMapping("/get-all-authors")
 	public List <Author> getAll() {
